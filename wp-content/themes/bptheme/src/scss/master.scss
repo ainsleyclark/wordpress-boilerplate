@@ -1,0 +1,41 @@
+/**
+ * master.scss
+ * Imports all files from abstracts, base, components, layout, pages & vendor
+ * @author Ainsley Clark
+ * @author URL:   https://www.ainsleyclark.com
+ * @author email: info@ainsleyclark.com
+ */
+
+/* ====================
+    Vendor
+    ==================== */
+@import 'vendor/mesh/mesh';
+
+/*  ====================
+    Abstracts
+    ==================== */
+@import 'abstracts/_mixins';
+
+/* ====================
+    Base
+    ==================== */
+@import 'base/_global';
+@import 'base/_fonts';
+@import 'base/_typography';
+
+/* ====================
+    Components
+    ==================== */
+@import 'components/_buttons';
+
+/* ====================
+    Layout
+    ==================== */
+@import 'layout/_header';
+@import 'layout/_footer';
+@import 'layout/_nav';
+
+/* ====================
+    Pages
+    ==================== */
+@import 'pages/_home';

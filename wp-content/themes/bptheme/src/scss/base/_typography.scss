@@ -1,0 +1,25 @@
+// -----------------------------------------------------------------------------
+// _typography.scss
+// This file contains all type declerations (h1, h2, p etc) for whole site.
+// -----------------------------------------------------------------------------
+
+/**
+ * Basic typography style for copy text
+ */
+html,
+body {
+	//font-family: //!SET Variables;
+	font-size: 90%;
+
+	@include media-tab {
+		font-size: 95%;
+	}
+
+	@include media-desk {
+		font-size: 100%;
+	}
+
+	@include media-hd {
+		font-size: 102.5%;
+	}
+}

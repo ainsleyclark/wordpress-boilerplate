@@ -1,7 +1,5 @@
 <?php 
 
-//https://code.tutsplus.com/articles/custom-post-type-helper-class--wp-25104
-
 class HTML_Minify {
     protected $tif_compress_css = true;
     protected $tif_compress_js = true;
