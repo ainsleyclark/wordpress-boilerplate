@@ -1,0 +1,41 @@
+{
+	"name": "wordpress-boilerplate",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"author": "Ainsley Clark",
+	"license": "ISC",
+	"homepage": "https://github.com/ainsleyclark/wordpress-boilerplate#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ainsleyclark/wordpress-boilerplate.git"
+	},
+	"scripts": {
+		"dev": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"watch": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"hot": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"production": "npm run clean && npm run scss-lint && npm run js-lint && node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+		"prod": "npm run production",
+		"clean": "prettier --config ./config/.prettierrc --write ./**/*.{css,scss,json,js} --ignore-path ./config/.prettierignore && npx eslint -c ./config/.eslintrc ./src/js/app.js --fix",
+		"lint": "npm run scss-lint && npm run js-lint",
+		"scss-lint": "sass-lint --config ./config/.sass-lint.yml '**/*.scss' --verbose --no-exit",
+		"js-lint": "npx eslint -c ./config/.eslintrc ./src/js/app.js"
+	},
+	"devDependencies": {
+		"browser-sync": "^2.26.7",
+		"browser-sync-webpack-plugin": "^2.2.2",
+		"cross-env": "^5.2.0",
+		"eslint": "^6.1.0",
+		"laravel-mix": "^4.1.2",
+		"prettier": "^1.18.2",
+		"prettier-webpack-plugin": "^1.2.0",
+		"resolve-url-loader": "^3.1.0",
+		"sass": "^1.22.7",
+		"sass-lint": "^1.13.1",
+		"sass-loader": "^7.1.0",
+		"vue-template-compiler": "^2.6.10"
+	},
+	"dependencies": {
+		"vanilla-lazyload": "^12.0.0"
+	}
+}
